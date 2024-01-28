@@ -57,7 +57,14 @@ SELECT * FROM rental ORDER BY rental_date DESC LIMIT 5;
 
 Сформируйте вывод в результат таким образом:
 - все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
-- замените буквы 'll' в именах на 'pp'.
+- замените буквы 'll' в именах на 'pp'.   
+
+### Решение 4
+```
+SELECT REPLACE(LOWER(first_name), 'll', 'pp') AS first_name, LOWER(last_name) AS last_name FROM customer  WHERE active= 1 AND (first_name = 'Kelly' OR first_name = 'Willie');
+```
+
+![alt text](https://github.com/BudyGun/sql-1/blob/main/images/s4.png)   
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
